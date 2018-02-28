@@ -40,7 +40,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     Button state;
     Button info;
     Button pass;
-    Button modify;
+    Button confirm;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -107,11 +107,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         pass1 = view.findViewById(R.id.textView5);
         pass2 = view.findViewById(R.id.textView6);
         oldPass = view.findViewById(R.id.editText2);
-        modify = view.findViewById(R.id.button3);
+        newPass = view.findViewById(R.id.editText3);
         state = view.findViewById(R.id.state);
         info =view.findViewById(R.id.info);
         pass = view.findViewById(R.id.pass);
-        modify = view.findViewById(R.id.confirm);
+        confirm = view.findViewById(R.id.confirm);
         state.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,11 +142,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 state3.setVisibility(View.INVISIBLE);
                 pass1.setVisibility(View.INVISIBLE);
                 pass2.setVisibility(View.INVISIBLE);
-                modify.setVisibility(View.INVISIBLE);
+                confirm.setVisibility(View.INVISIBLE);
                 info1.setVisibility(View.VISIBLE);
                 oldPass.setVisibility(View.INVISIBLE);
                 newPass.setVisibility(View.INVISIBLE);
-                modify.setVisibility((View.INVISIBLE));
+                confirm.setVisibility((View.INVISIBLE));
                 break;
             }
             case R.id.state: {
@@ -159,7 +159,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 pass2.setVisibility(View.INVISIBLE);
                 oldPass.setVisibility(View.INVISIBLE);
                 newPass.setVisibility(View.INVISIBLE);
-                modify.setVisibility((View.INVISIBLE));
+                confirm.setVisibility((View.INVISIBLE));
                 break;
             }
             case R.id.pass: {
@@ -171,7 +171,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 pass2.setVisibility(View.VISIBLE);
                 oldPass.setVisibility(View.VISIBLE);
                 newPass.setVisibility(View.VISIBLE);
-                modify.setVisibility((View.VISIBLE));
+                confirm.setVisibility((View.VISIBLE));
                 break;
             }
             default:
